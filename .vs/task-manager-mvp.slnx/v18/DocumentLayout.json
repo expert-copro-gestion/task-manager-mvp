@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\user-service\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\user-service\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\routes\\users.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\user-service\\routes\\users.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\controllers\\usercontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\user-service\\controllers\\usercontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\middleware\\auth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\user-service\\middleware\\auth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\user-service\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\config\\database.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\user-service\\config\\database.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\task-service\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\task-service\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -28,18 +56,109 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\package.json",
+              "RelativeDocumentMoniker": "backend\\user-service\\package.json",
+              "ToolTip": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\package.json",
+              "RelativeToolTip": "backend\\user-service\\package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-02T20:29:08.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "server.js",
+              "DocumentMoniker": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\server.js",
+              "RelativeDocumentMoniker": "backend\\user-service\\server.js",
+              "ToolTip": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\server.js",
+              "RelativeToolTip": "backend\\user-service\\server.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-02T20:26:30.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "users.js",
+              "DocumentMoniker": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\routes\\users.js",
+              "RelativeDocumentMoniker": "backend\\user-service\\routes\\users.js",
+              "ToolTip": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\routes\\users.js",
+              "RelativeToolTip": "backend\\user-service\\routes\\users.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-02T20:26:13.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "package-lock.json",
+              "DocumentMoniker": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\package-lock.json",
+              "RelativeDocumentMoniker": "backend\\user-service\\package-lock.json",
+              "ToolTip": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\package-lock.json",
+              "RelativeToolTip": "backend\\user-service\\package-lock.json",
+              "ViewState": "AgIAAMUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-02T20:22:30.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "usercontroller.js",
+              "DocumentMoniker": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\controllers\\usercontroller.js",
+              "RelativeDocumentMoniker": "backend\\user-service\\controllers\\usercontroller.js",
+              "ToolTip": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\controllers\\usercontroller.js",
+              "RelativeToolTip": "backend\\user-service\\controllers\\usercontroller.js",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwHUAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-02T20:20:19.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "auth.js",
+              "DocumentMoniker": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\middleware\\auth.js",
+              "RelativeDocumentMoniker": "backend\\user-service\\middleware\\auth.js",
+              "ToolTip": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\middleware\\auth.js",
+              "RelativeToolTip": "backend\\user-service\\middleware\\auth.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-02T20:19:57.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "database.js",
+              "DocumentMoniker": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\config\\database.js",
+              "RelativeDocumentMoniker": "backend\\user-service\\config\\database.js",
+              "ToolTip": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\user-service\\config\\database.js",
+              "RelativeToolTip": "backend\\user-service\\config\\database.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-02T20:19:31.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "package.json",
               "DocumentMoniker": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\task-service\\package.json",
               "RelativeDocumentMoniker": "backend\\task-service\\package.json",
               "ToolTip": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\task-service\\package.json",
               "RelativeToolTip": "backend\\task-service\\package.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-02-02T09:46:51.756Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "server.js",
               "DocumentMoniker": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\task-service\\server.js",
               "RelativeDocumentMoniker": "backend\\task-service\\server.js",
@@ -47,12 +166,11 @@
               "RelativeToolTip": "backend\\task-service\\server.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-02-02T09:38:08.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T09:38:08.015Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "tasks.js",
               "DocumentMoniker": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\task-service\\routes\\tasks.js",
               "RelativeDocumentMoniker": "backend\\task-service\\routes\\tasks.js",
@@ -60,8 +178,7 @@
               "RelativeToolTip": "backend\\task-service\\routes\\tasks.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-02-02T09:37:48.371Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T09:37:48.371Z"
             }
           ]
         }

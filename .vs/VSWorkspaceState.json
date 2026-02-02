@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\backend",
-    "\\backend\\auth-service",
-    "\\backend\\auth-service\\controllers",
-    "\\backend\\auth-service\\middleware",
-    "\\backend\\task-service",
-    "\\backend\\task-service\\config",
     "\\backend\\task-service\\controllers",
     "\\backend\\task-service\\middleware",
-    "\\backend\\task-service\\routes"
+    "\\backend\\task-service\\routes",
+    "\\backend\\user-service",
+    "\\backend\\user-service\\config",
+    "\\backend\\user-service\\controllers",
+    "\\backend\\user-service\\middleware",
+    "\\backend\\user-service\\routes"
   ],
-  "SelectedNode": "\\backend\\task-service\\package.json",
+  "SelectedNode": "\\backend\\user-service\\package.json",
   "PreviewInSolutionExplorer": false
 }
