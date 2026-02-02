@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "backend\\auth-service\\server.js",
               "ToolTip": "C:\\Users\\alexv\\Desktop\\task-manager-mvp\\backend\\auth-service\\server.js",
               "RelativeToolTip": "backend\\auth-service\\server.js",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAUwBQAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAUwBwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-02-01T19:58:46.509Z",
               "EditorCaption": ""
@@ -92,6 +92,10 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-02-01T19:56:48.261Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

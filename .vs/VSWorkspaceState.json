@@ -3,8 +3,14 @@
     "",
     "\\backend",
     "\\backend\\auth-service",
+    "\\backend\\auth-service\\controllers",
+    "\\backend\\auth-service\\middleware",
     "\\backend\\task-service",
-    "\\docs"
+    "\\backend\\task-service\\config",
+    "\\backend\\task-service\\controllers",
+    "\\backend\\task-service\\middleware",
+    "\\backend\\task-service\\routes"
   ],
+  "SelectedNode": "\\backend\\task-service\\package.json",
   "PreviewInSolutionExplorer": false
 }
