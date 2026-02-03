@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\backend",
-    "\\backend\\task-service\\controllers",
-    "\\backend\\task-service\\middleware",
-    "\\backend\\task-service\\routes",
-    "\\backend\\user-service",
-    "\\backend\\user-service\\config",
-    "\\backend\\user-service\\controllers",
-    "\\backend\\user-service\\middleware",
-    "\\backend\\user-service\\routes"
+    "\\backend\\auth-service",
+    "\\backend\\auth-service\\routes",
+    "\\backend\\task-service",
+    "\\frontend",
+    "\\frontend\\public",
+    "\\frontend\\src",
+    "\\frontend\\src\\pages",
+    "\\frontend\\src\\styles"
   ],
-  "SelectedNode": "\\backend\\user-service\\package.json",
+  "SelectedNode": "\\frontend\\src\\services\\apiClient.js",
   "PreviewInSolutionExplorer": false
 }
