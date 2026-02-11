@@ -103,6 +103,7 @@ const [currentUser] = useState(() => JSON.parse(localStorage.getItem('user')));
         <div className="dashboard-container">
             <div className="dashboard-header">
                 <div className="header-left">
+                    <img src="/logo.png" alt="Logo Aubry" className="header-logo"/>
                     <h1>📋 Task Manager</h1>
                 </div>
                 <div className="header-right">

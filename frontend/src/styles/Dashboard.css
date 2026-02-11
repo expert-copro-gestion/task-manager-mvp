@@ -304,3 +304,9 @@
         flex-direction: column;
     }
 }
+.header-logo {
+    height: 45px;
+    width: auto;
+    margin-right: 12px;
+    object-fit: contain;
+}
