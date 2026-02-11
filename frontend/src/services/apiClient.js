@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost';
-const AUTH_SERVICE = `${API_BASE_URL}:3001`;
-const TASK_SERVICE = `${API_BASE_URL}:3003`;
-const USER_SERVICE = `${API_BASE_URL}:3002`;
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost';
+    const AUTH_SERVICE = process.env.REACT_APP_AUTH_SERVICE || `${API_BASE_URL}:3001`;
+    const TASK_SERVICE = process.env.REACT_APP_TASK_SERVICE || `${API_BASE_URL}:3003`;
+    const USER_SERVICE = process.env.REACT_APP_USER_SERVICE || `${API_BASE_URL}:3002`;
 
 const axiosInstance = axios.create();
 
