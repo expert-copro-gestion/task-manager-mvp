@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { taskAPI, userAPI } from '../services/apiClient';
 import '../styles/Dashboard.css';
@@ -16,7 +16,8 @@ const Dashboard = () => {
 
     const currentUser = JSON.parse(localStorage.getItem('user'));
 
-    const loadData = async () => {
+    const loadData = useCallback(async () => {
+        if (!currentUser) return;
         try {
             setLoading(true);
             const tasksResponse = await taskAPI.getTasks(currentUser.org_id);
@@ -29,7 +30,7 @@ const Dashboard = () => {
         } finally {
             setLoading(false);
         }
-    };
+    },[currentUser]);
 
     useEffect(() => {
         if (!currentUser) {
