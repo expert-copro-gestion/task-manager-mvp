@@ -3,12 +3,8 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const pool = new Pool({
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    database: process.env.DB_NAME,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    ssl: {rejectUnauthorized: false}
+    connectionString: 'postgresql://task_manager_prod_a7tm_user:y43kVhPnb4mkiPiOPZxIfLkHCaGGHjI6@dpg-d66bh4ur433s73dg4ks0-a.frankfurt-postgres.render.com:5432/task_manager_prod_a7tm?sslmode=require',
+    ssl: { rejectUnauthorized: false }
 });
 
 // ===== LOGIN =====
