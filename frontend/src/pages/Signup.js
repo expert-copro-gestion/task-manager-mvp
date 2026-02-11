@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { authAPI } from '../services/apiClient';
 import '../styles/Signup.css';
@@ -31,13 +31,11 @@ const Signup = () => {
                 formData.password,
                 formData.orgCode
             );
-
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('user', JSON.stringify(response.data.user));
-
             navigate('/dashboard');
         } catch (err) {
-            setError(err.response?.data?.message || 'Erreur lors de l\'inscription');
+            setError(err.response?.data?.message || 'Erreur inscription');
         } finally {
             setLoading(false);
         }
@@ -50,12 +48,8 @@ const Signup = () => {
     return (
         <div className="signup-container">
             <div className="signup-card">
-                <button className="back-button" onClick={handleBack}>
-                    ← Retour
-                </button>
-
+                <button className="back-button" onClick={handleBack}>← Retour</button>
                 <h1>Créer un compte</h1>
-
                 <form onSubmit={handleSignup}>
                     <div className="form-group">
                         <label>Nom</label>
@@ -69,7 +63,6 @@ const Signup = () => {
                             required
                         />
                     </div>
-
                     <div className="form-group">
                         <label>Email</label>
                         <input
@@ -82,7 +75,6 @@ const Signup = () => {
                             required
                         />
                     </div>
-
                     <div className="form-group">
                         <label>Mot de passe</label>
                         <input
@@ -95,7 +87,6 @@ const Signup = () => {
                             required
                         />
                     </div>
-
                     <div className="form-group">
                         <label>Code organisation</label>
                         <input
@@ -108,9 +99,7 @@ const Signup = () => {
                             required
                         />
                     </div>
-
                     {error && <div className="error-message">{error}</div>}
-
                     <button type="submit" className="signup-button" disabled={loading}>
                         {loading ? 'Création...' : 'Créer un compte'}
                     </button>

@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { authAPI } from '../services/apiClient';
 import '../styles/Login.css';
@@ -23,13 +23,11 @@ const Login = () => {
 
         try {
             const response = await authAPI.login(selectedProfile.email, password);
-
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('user', JSON.stringify(response.data.user));
-
             navigate('/dashboard');
         } catch (err) {
-            setError(err.response?.data?.message || 'Erreur de connexion');
+            setError(err.response?.data?.message || 'Erreur connexion');
         } finally {
             setLoading(false);
         }
@@ -43,13 +41,9 @@ const Login = () => {
     return (
         <div className="login-container">
             <div className="login-card">
-                <button className="back-button" onClick={handleBack}>
-                    ← Retour
-                </button>
-
+                <button className="back-button" onClick={handleBack}>← Retour</button>
                 <div className="login-avatar">{selectedProfile.initials}</div>
                 <div className="login-email">{selectedProfile.email}</div>
-
                 <form onSubmit={handleLogin}>
                     <div className="form-group">
                         <input
@@ -60,9 +54,7 @@ const Login = () => {
                             disabled={loading}
                         />
                     </div>
-
                     {error && <div className="error-message">{error}</div>}
-
                     <button type="submit" className="login-button" disabled={loading}>
                         {loading ? 'Connexion...' : 'Se connecter'}
                     </button>
