@@ -14,7 +14,7 @@ const Dashboard = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
-    const currentUser = JSON.parse(localStorage.getItem('user'));
+const [currentUser] = useState(() => JSON.parse(localStorage.getItem('user')));
 
     const loadData = useCallback(async () => {
         if (!currentUser) return;
@@ -30,7 +30,7 @@ const Dashboard = () => {
         } finally {
             setLoading(false);
         }
-    },[currentUser]);
+    }, [currentUser]);
 
     useEffect(() => {
         if (!currentUser) {
