@@ -2,20 +2,21 @@ const { Pool } = require('pg');
 require('dotenv').config();
 
 const pool = new Pool({
-    connectionString: 'postgresql://task_manager_prod_a7tm_user:y43kVhPnb4mkiPiOPZxIfLkHCaGGHjI6@dpg-d66bh4ur433s73dg4ks0-a.frankfurt-postgres.render.com:5432/task_manager_prod_a7tm?sslmode=require',
+    connectionString: process.env.DATABASE_URL,
     ssl: { rejectUnauthorized: false }
 });
 
 // ===== GET ALL USERS BY ORG =====
 const getUsers = async (req, res) => {
     try {
-        const orgId = req.orgId;
-
+        const orgId = req.query.orgId || req.orgId;
+        if (!orgId) {
+            return res.status(400).json({ error: 'orgId is required' });
+        }
         const result = await pool.query(
             'SELECT id, name, email, org_id, role, created_at FROM users WHERE org_id = $1 ORDER BY name',
             [orgId]
         );
-
         res.json(result.rows);
     } catch (err) {
         console.error('Get users error:', err);
@@ -28,16 +29,13 @@ const getUserById = async (req, res) => {
     try {
         const { id } = req.params;
         const orgId = req.orgId;
-
         const result = await pool.query(
             'SELECT id, name, email, org_id, role, created_at FROM users WHERE id = $1 AND org_id = $2',
             [id, orgId]
         );
-
         if (result.rows.length === 0) {
             return res.status(404).json({ error: 'User not found' });
         }
-
         res.json(result.rows[0]);
     } catch (err) {
         console.error('Get user by id error:', err);
@@ -51,38 +49,29 @@ const updateUser = async (req, res) => {
         const { id } = req.params;
         const { name, email } = req.body;
         const orgId = req.orgId;
-
-        // Vérifier que l'utilisateur existe et appartient à l'org
         const checkUser = await pool.query(
             'SELECT id FROM users WHERE id = $1 AND org_id = $2',
             [id, orgId]
         );
-
         if (checkUser.rows.length === 0) {
             return res.status(404).json({ error: 'User not found' });
         }
-
-        // Construire la requête UPDATE
         let updateQuery = 'UPDATE users SET ';
         let params = [];
         let paramIndex = 1;
-
         if (name !== undefined) {
             updateQuery += `name = $${paramIndex}`;
             params.push(name);
             paramIndex++;
         }
-
         if (email !== undefined) {
             if (params.length > 0) updateQuery += ', ';
             updateQuery += `email = $${paramIndex}`;
             params.push(email);
             paramIndex++;
         }
-
         updateQuery += ` WHERE id = $${paramIndex} AND org_id = $${paramIndex + 1} RETURNING id, name, email, org_id, role, created_at`;
         params.push(id, orgId);
-
         const result = await pool.query(updateQuery, params);
         res.json(result.rows[0]);
     } catch (err) {
@@ -91,20 +80,17 @@ const updateUser = async (req, res) => {
     }
 };
 
-// ===== GET ORGANIZATION BY CODE =====
+// ===== GET ORGANIZATION BY CODE OR NAME =====
 const getOrganizationByCode = async (req, res) => {
     try {
         const { code } = req.params;
-
         const result = await pool.query(
-            'SELECT id, name, code FROM organizations WHERE code = $1',
+            'SELECT id, name, code FROM organizations WHERE code = $1 OR LOWER(name) = LOWER($1)',
             [code]
         );
-
         if (result.rows.length === 0) {
             return res.status(404).json({ error: 'Organization not found' });
         }
-
         res.json(result.rows[0]);
     } catch (err) {
         console.error('Get organization error:', err);
