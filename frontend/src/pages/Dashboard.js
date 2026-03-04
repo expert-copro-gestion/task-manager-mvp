@@ -20,9 +20,9 @@ const [currentUser] = useState(() => JSON.parse(localStorage.getItem('user')));
         if (!currentUser) return;
         try {
             setLoading(true);
-            const tasksResponse = await taskAPI.getTasks(currentUser.org_id);
+            const tasksResponse = await taskAPI.getTasks(currentUser.orgId);
             setTasks(tasksResponse.data);
-            const usersResponse = await userAPI.getUsers(currentUser.org_id);
+            const usersResponse = await userAPI.getUsers(currentUser.orgId);
             setUsers(usersResponse.data);
         } catch (err) {
             setError('Erreur lors du chargement');

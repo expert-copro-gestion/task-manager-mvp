@@ -9,8 +9,9 @@
     "\\frontend",
     "\\frontend\\src",
     "\\frontend\\src\\pages",
+    "\\frontend\\src\\services",
     "\\frontend\\src\\styles"
   ],
-  "SelectedNode": "\\backend\\task-service\\controllers\\taskController.js",
+  "SelectedNode": "\\frontend\\src\\services\\apiClient.js",
   "PreviewInSolutionExplorer": false
 }
