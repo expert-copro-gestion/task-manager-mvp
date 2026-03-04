@@ -2,7 +2,7 @@ const { Pool } = require('pg');
 require('dotenv').config();
 
 const pool = new Pool({
-    connectionString: 'postgresql://task_manager_prod_a7tm_user:y43kVhPnb4mkiPiOPZxIfLkHCaGGHjI6@dpg-d66bh4ur433s73dg4ks0-a.frankfurt-postgres.render.com:5432/task_manager_prod_a7tm?sslmode=require',
+    connectionString: process.env.DATABASE_URL,
     ssl: { rejectUnauthorized: false }
 });
 
@@ -47,8 +47,8 @@ const createTask = async (req, res) => {
 
         const result = await pool.query(
             `INSERT INTO tasks (title, description, assigned_to, org_id, completed, created_by)
-       VALUES ($1, $2, $3, $4, false, $5)
-       RETURNING *`,
+             VALUES ($1, $2, $3, $4, false, $5)
+             RETURNING *`,
             [title, description || null, assignedTo, orgId, req.userId]
         );
 
@@ -59,14 +59,13 @@ const createTask = async (req, res) => {
     }
 };
 
-// ===== UPDATE TASK (mark as complete/incomplete) =====
+// ===== UPDATE TASK =====
 const updateTask = async (req, res) => {
     try {
         const { id } = req.params;
         const { completed, title, description, assignedTo } = req.body;
         const orgId = req.orgId;
 
-        // Vérifier que la tâche appartient à l'org
         const checkTask = await pool.query(
             'SELECT id FROM tasks WHERE id = $1 AND org_id = $2',
             [id, orgId]
@@ -76,7 +75,6 @@ const updateTask = async (req, res) => {
             return res.status(404).json({ error: 'Task not found' });
         }
 
-        // Construire la requête UPDATE dynamiquement
         let updateQuery = 'UPDATE tasks SET ';
         let params = [];
         let paramIndex = 1;
