@@ -13,6 +13,7 @@ const Dashboard = () => {
     const [selectedAssignee, setSelectedAssignee] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
+    const [searchQuery, setSearchQuery] = useState('');
 
 const [currentUser] = useState(() => JSON.parse(localStorage.getItem('user')));
 
@@ -89,11 +90,14 @@ const [currentUser] = useState(() => JSON.parse(localStorage.getItem('user')));
 
     if (loading) return <div className="dashboard-container">Chargement...</div>;
 
+    const isAdmin = currentUser?.role === 'ADMIN';
+
     const filteredTasks = tasks.filter((task) => {
         const isCompleted = task.completed;
         const matchesTab = activeTab === 'active' ? !isCompleted : isCompleted;
         const matchesFilter = !filterUserId || task.assigned_to === filterUserId;
-        return matchesTab && matchesFilter;
+        const matchesSearch = !searchQuery || task.title.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesTab && matchesFilter && matchesSearch;
     });
 
     const activeCount = tasks.filter((t) => !t.completed).length;
@@ -113,19 +117,21 @@ const [currentUser] = useState(() => JSON.parse(localStorage.getItem('user')));
             </div>
 
             <div className="dashboard-content">
-                <div className="sidebar">
-                    <h3>👥 Membres</h3>
-                    <div className="members-list">
-                        <div className={`member-item ${!filterUserId ? 'active' : ''}`} onClick={() => setFilterUserId(null)}>
-                            Tous les membres
-                        </div>
-                        {users.map((user) => (
-                            <div key={user.id} className={`member-item ${filterUserId === user.id ? 'active' : ''}`} onClick={() => setFilterUserId(user.id)}>
-                                {user.name}
+                {isAdmin && (
+                    <div className="sidebar">
+                        <h3>👥 Membres</h3>
+                        <div className="members-list">
+                            <div className={`member-item ${!filterUserId ? 'active' : ''}`} onClick={() => setFilterUserId(null)}>
+                                Tous les membres
                             </div>
-                        ))}
+                            {users.map((user) => (
+                                <div key={user.id} className={`member-item ${filterUserId === user.id ? 'active' : ''}`} onClick={() => setFilterUserId(user.id)}>
+                                    {user.name}
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                )}
 
                 <div className="main-panel">
                     <div className="create-task-section">
@@ -152,6 +158,16 @@ const [currentUser] = useState(() => JSON.parse(localStorage.getItem('user')));
                         <button className={`tab ${activeTab === 'completed' ? 'active' : ''}`} onClick={() => setActiveTab('completed')}>
                             Complétées ({completedCount})
                         </button>
+                    </div>
+
+                    <div className="search-section">
+                        <input
+                            type="text"
+                            className="search-bar"
+                            placeholder="🔍 Rechercher une tâche..."
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                        />
                     </div>
 
                     <div className="tasks-list">

@@ -24,7 +24,7 @@ const login = async (req, res) => {
             return res.status(401).json({ error: 'Invalid email or password' });
         }
         const token = jwt.sign(
-            { id: user.id, email: user.email, orgId: user.org_id },
+            { id: user.id, email: user.email, orgId: user.org_id, role: user.role },
             process.env.JWT_SECRET,
             { expiresIn: process.env.JWT_EXPIRY }
         );
@@ -34,7 +34,8 @@ const login = async (req, res) => {
                 id: user.id,
                 name: user.name,
                 email: user.email,
-                orgId: user.org_id
+                orgId: user.org_id,
+                role: user.role
             }
         });
     } catch (err) {
@@ -72,7 +73,7 @@ const signup = async (req, res) => {
         );
         const newUser = result.rows[0];
         const token = jwt.sign(
-            { id: newUser.id, email: newUser.email, orgId: newUser.org_id },
+            { id: newUser.id, email: newUser.email, orgId: newUser.org_id, role: 'USER' },
             process.env.JWT_SECRET,
             { expiresIn: process.env.JWT_EXPIRY }
         );
@@ -82,7 +83,8 @@ const signup = async (req, res) => {
                 id: newUser.id,
                 name: newUser.name,
                 email: newUser.email,
-                orgId: newUser.org_id
+                orgId: newUser.org_id,
+                role: 'USER'
             }
         });
     } catch (err) {
