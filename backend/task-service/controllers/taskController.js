@@ -15,7 +15,12 @@ const getTasks = async (req, res) => {
         let query = 'SELECT * FROM tasks WHERE org_id = $1';
         let params = [orgId];
 
-        if (assignedTo) {
+        // Non-admin users can only see their own tasks
+        if (req.role !== 'ADMIN') {
+            query += ` AND assigned_to = $${params.length + 1}`;
+            params.push(req.userId);
+        } else if (assignedTo) {
+            // Admin can filter by assignee via query param
             query += ` AND assigned_to = $${params.length + 1}`;
             params.push(assignedTo);
         }
